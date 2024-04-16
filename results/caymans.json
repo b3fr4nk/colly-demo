@@ -1,0 +1,56 @@
+[
+ {
+  "URL": "https://www.cars.com/vehicledetail/ae54803b-0fe6-4639-adaa-522e2cbf9214/?attribution_type=isa",
+  "Price": 24974,
+  "Mileage": 68283,
+  "Location": "Sarasota, FL"
+ },
+ {
+  "URL": "https://www.cars.com/vehicledetail/8d238753-04ce-474a-93b5-68bca352ec34/",
+  "Price": 25000,
+  "Mileage": 40200,
+  "Location": "Miami Beach, FL (2,597 mi.)"
+ },
+ {
+  "URL": "https://www.cars.com/vehicledetail/dc6e935a-176b-4197-90e6-f50393fe0cca/",
+  "Price": 25950,
+  "Mileage": 64458,
+  "Location": "Bellevue, WA (667 mi.)"
+ },
+ {
+  "URL": "https://www.cars.com/vehicledetail/d7177926-f182-411f-9d18-2f2f9ed9c998/",
+  "Price": 25895,
+  "Mileage": 84973,
+  "Location": "Union, NJ (2,551 mi.)"
+ },
+ {
+  "URL": "https://www.cars.com/vehicledetail/63c173a6-e5ba-4b52-8e6e-4183d564cbb6/",
+  "Price": 29991,
+  "Mileage": 55066,
+  "Location": "Dallas, TX (1,480 mi.)"
+ },
+ {
+  "URL": "https://www.cars.com/vehicledetail/1403a475-ed8f-4298-8ad0-148713395c0c/",
+  "Price": 29900,
+  "Mileage": 42278,
+  "Location": "Naples, FL (2,499 mi.)"
+ },
+ {
+  "URL": "https://www.cars.com/vehicledetail/369ef174-7950-4acb-a111-5e2615db9c3c/",
+  "Price": 28990,
+  "Mileage": 39362,
+  "Location": "Lee's Summit, MO (1,519 mi.)"
+ },
+ {
+  "URL": "https://www.cars.com/vehicledetail/49d85f38-4b04-4c6e-8b52-bc79bb9426c2/",
+  "Price": 21990,
+  "Mileage": 80917,
+  "Location": "Dallas, TX (1,479 mi.)"
+ },
+ {
+  "URL": "https://www.cars.com/vehicledetail/90c2d0d9-751a-4d84-ac09-4b638df2590e/",
+  "Price": 20398,
+  "Mileage": 96743,
+  "Location": "Greenville, SC (2,228 mi.)"
+ }
+]

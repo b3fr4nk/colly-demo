@@ -1,7 +1,9 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"os"
 	"strconv"
 	"strings"
 
@@ -9,10 +11,10 @@ import (
 )
 
 type listing struct {
-	sourceURL string
-	price float32
-	mileage uint32
-	location string
+	SourceURL string `json:"URL"`
+	Price float32 `json:"Price"`
+	Mileage uint32 `json:"Mileage"`
+	Location string `json:"Location"`
 
 }
 
@@ -43,21 +45,21 @@ func main() {
 	c.OnHTML(".vehicle-details", func(e *colly.HTMLElement) {
 		item := listing{}
 		url := e.ChildAttr("a.vehicle-card-link", "href")
-		item.sourceURL = "https://www.cars.com" + url
-		item.location = e.ChildText(".miles-from")
+		item.SourceURL = "https://www.cars.com" + url
+		item.Location = e.ChildText(".miles-from")
 		stringPrice := e.ChildText(".primary-price")
 		price, err := dollarStringToFloat(stringPrice)
 		if err != nil{
 			fmt.Println(err)
 		}
-		item.price = price
+		item.Price = price
 		
 		mileageString := e.ChildText(".mileage")
 		mileage, err := mileageStringToUInt(mileageString)
 		if err != nil {
 			fmt.Println(err)
 		}
-		item.mileage = mileage
+		item.Mileage = mileage
 		
 		cars = append(cars, item)
 	})
@@ -68,5 +70,7 @@ func main() {
 
 	c.Visit("https://www.cars.com/shopping/results/?dealer_id=&keyword=&list_price_max=30000&list_price_min=&makes[]=porsche&maximum_distance=all&mileage_max=100000&models[]=porsche-cayman&monthly_payment=340&page_size=20&sort=best_match_desc&stock_type=used&transmission_slugs[]=manual&year_max=&year_min=&zip=94912")
 
-	fmt.Println(cars)
+	carsJSON, _ := json.MarshalIndent(cars, "", " ")
+	os.WriteFile("results/caymans.json", carsJSON, 0666)
+	fmt.Println(string(carsJSON))
 }
